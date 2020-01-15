@@ -1,3 +1,4 @@
+import 'package:coffee_finder_app/widgets/MyMapPage.dart';
 import 'package:flutter/material.dart';
 
 void main(){
