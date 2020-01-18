@@ -1,3 +1,5 @@
+import 'package:coffee_finder_app/api/MyLocationApi.dart';
+import 'package:coffee_finder_app/model/LocationData.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -16,6 +18,12 @@ class MyMapPage extends StatefulWidget {
 class _MyMapPageState extends State<MyMapPage> {
 
   GoogleMapController mapController;
+  MyLocationData _myLocationData;
+
+  Future<MyLocationData>_getLocation() async {
+    final locationApi = MyLocationApi.getInstance();
+    return await locationApi.getLocation();
+  }
 
   void _onMapCreated(GoogleMapController controller){
     setState(() {
