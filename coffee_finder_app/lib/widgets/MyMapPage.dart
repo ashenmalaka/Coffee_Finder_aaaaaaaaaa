@@ -45,7 +45,8 @@ class _MyMapPageState extends State<MyMapPage> {
     );
   }
 
-  void _onMapCreated(GoogleMapController controller){
+  void _onMapCreated(GoogleMapController controller) async {
+    _shops = await _getCoffeeShops();
     setState(() {
       mapController = controller;
     });
