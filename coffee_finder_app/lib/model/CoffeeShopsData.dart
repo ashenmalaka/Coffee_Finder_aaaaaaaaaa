@@ -6,7 +6,18 @@ class CoffeeShopsData {
 
   CoffeeShopsData(this.shopList);
 
-  
+  static convertToShops(List<PlacesSearchResult> googlePlaces){
+
+    List<Shop> shops = [];
+
+    googlePlaces.forEach((shop){
+      if(shop.photos != null){
+        shops.add(Shop.shopDetails(shop));
+      }
+     }
+    );
+    return CoffeeShopsData(shops);
+  }
 
 }
 
