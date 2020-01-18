@@ -13,7 +13,8 @@ class MyLocationApi{
     Map<String, double> location;
 
     try{
-
+      location = await _location.getLocation();
+      error = null;
     }on PlatformException catch(e){
       if(e.code == 'PERMISSION_DENIED'){
         error = 'Permission denied';
