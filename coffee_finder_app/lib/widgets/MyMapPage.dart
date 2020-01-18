@@ -25,6 +25,18 @@ class _MyMapPageState extends State<MyMapPage> {
     return await locationApi.getLocation();
   }
 
+  @override
+  void initState() {
+    super.initState();
+
+    _getLocation().then((location) {
+      setState(() {
+        _myLocationData = location;
+      });
+     }
+    );
+  }
+
   void _onMapCreated(GoogleMapController controller){
     setState(() {
       mapController = controller;
