@@ -52,6 +52,14 @@ class _MyMapPageState extends State<MyMapPage> {
           child: _myLocationData != null ? SizedBox(
             child: GoogleMap(
               onMapCreated: _onMapCreated,
+              options: GoogleMapOptions(
+                cameraPosition: CameraPosition(
+                  target: LatLng(
+                    _myLocationData.lat, 
+                    _myLocationData.lon,
+                    )
+                )
+                ),
             ),
           ): CircularProgressIndicator(
             strokeWidth: 4.0,
