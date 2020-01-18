@@ -2,6 +2,12 @@ import 'package:google_maps_webservice/places.dart';
 
 class CoffeeShopsData {
 
+  List<Shop> shopList;
+
+  CoffeeShopsData(this.shopList);
+
+  
+
 }
 
 class Shop{
