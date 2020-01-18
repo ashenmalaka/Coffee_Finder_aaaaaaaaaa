@@ -24,5 +24,6 @@ class MyLocationApi{
       }
       location = null;
     }
+    return MyLocationData.locationItems(location);
   }
 }
