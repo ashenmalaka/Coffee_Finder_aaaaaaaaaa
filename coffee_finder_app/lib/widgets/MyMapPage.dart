@@ -57,7 +57,8 @@ class _MyMapPageState extends State<MyMapPage> {
                   target: LatLng(
                     _myLocationData.lat, 
                     _myLocationData.lon,
-                    )
+                    ),
+                    zoom: 14.0
                 )
                 ),
             ),
