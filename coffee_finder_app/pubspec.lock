@@ -77,12 +77,10 @@ packages:
   google_maps_flutter:
     dependency: "direct main"
     description:
-      path: "packages/google_maps_flutter"
-      ref: HEAD
-      resolved-ref: e1e8a04bd104a6a772e6f0e72eaf8615f14c6541
-      url: "git://github.com/flutter/plugins"
-    source: git
-    version: "0.5.21+15"
+      name: google_maps_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.3+3"
   image:
     dependency: transitive
     description:
@@ -90,6 +88,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.4"
+  location:
+    dependency: "direct main"
+    description:
+      name: location
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.4.1"
   matcher:
     dependency: transitive
     description:
@@ -202,4 +207,4 @@ packages:
     version: "3.5.0"
 sdks:
   dart: ">=2.4.0 <3.0.0"
-  flutter: ">=1.10.0 <2.0.0"
+  flutter: ">=0.11.9 <2.0.0"
