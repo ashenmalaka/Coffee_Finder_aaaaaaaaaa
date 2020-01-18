@@ -53,7 +53,10 @@ class _MyMapPageState extends State<MyMapPage> {
             child: GoogleMap(
               onMapCreated: _onMapCreated,
             ),
-          ),
+          ): CircularProgressIndicator(
+            strokeWidth: 4.0,
+            valueColor: AlwaysStoppedAnimation(Colors.white),
+          )
         ),
       );
     }
