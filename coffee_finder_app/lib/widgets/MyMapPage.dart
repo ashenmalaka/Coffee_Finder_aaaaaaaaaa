@@ -49,7 +49,7 @@ class _MyMapPageState extends State<MyMapPage> {
         title: new Text(widget.title),
         ),
         body: new Center(
-          child: SizedBox(
+          child: _myLocationData != null ? SizedBox(
             child: GoogleMap(
               onMapCreated: _onMapCreated,
             ),
