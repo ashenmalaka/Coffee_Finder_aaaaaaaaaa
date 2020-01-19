@@ -24,7 +24,7 @@ class _MyMapPageState extends State<MyMapPage> {
   CoffeeShopsData _shops;
 
   _addMarkers(CoffeeShopsData places){
-    places.shopList.forEach(
+    places.shopList.forEach((shop){
       mapController.addMarker(
         MarkerOptions(
           position: LatLng(
@@ -36,7 +36,8 @@ class _MyMapPageState extends State<MyMapPage> {
               ''
             )
         )
-      )
+      );
+     }
     );
   }
 
