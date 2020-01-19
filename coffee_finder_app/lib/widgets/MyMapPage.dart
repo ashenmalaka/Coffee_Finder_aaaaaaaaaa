@@ -27,6 +27,7 @@ class _MyMapPageState extends State<MyMapPage> {
   String _shopName;
   String _shopImage;
 
+  //Added features to marker
   void _updateSelectedMarker(MarkerOptions changes){
     mapController.updateMarker(_selectedMarker, changes);
   }
@@ -58,7 +59,7 @@ class _MyMapPageState extends State<MyMapPage> {
     );
   }
 
-
+  //Added markers
   _addMarkers(CoffeeShopsData places){
     places.shopList.forEach((shop){
       mapController.addMarker(
@@ -107,6 +108,7 @@ class _MyMapPageState extends State<MyMapPage> {
       mapController.onMarkerTapped.add(_onMarkerTapped);
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
