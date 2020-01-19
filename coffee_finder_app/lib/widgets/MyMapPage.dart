@@ -67,6 +67,7 @@ class _MyMapPageState extends State<MyMapPage> {
     _shops = await _getCoffeeShops();
     setState(() {
       mapController = controller;
+      _addMarkers(_shops);
     });
   }
   @override
