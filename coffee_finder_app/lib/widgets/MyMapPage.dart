@@ -23,6 +23,23 @@ class _MyMapPageState extends State<MyMapPage> {
   MyLocationData _myLocationData;
   CoffeeShopsData _shops;
 
+  _addMarkers(CoffeeShopsData places){
+    places.shopList.forEach(
+      mapController.addMarker(
+        MarkerOptions(
+          position: LatLng(
+            shop.lat, 
+            shop.lon
+            ),
+            infoWindowText: InfoWindowText(
+              shop.name,
+              ''
+            )
+        )
+      )
+    );
+  }
+
   Future<CoffeeShopsData> _getCoffeeShops() async {
     final shopsApi = CoffeeShopsApi.getInstance();
     return await shopsApi.getCoffeeShops(this._myLocationData);
