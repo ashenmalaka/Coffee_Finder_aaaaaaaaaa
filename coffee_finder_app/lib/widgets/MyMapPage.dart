@@ -104,6 +104,7 @@ class _MyMapPageState extends State<MyMapPage> {
     setState(() {
       mapController = controller;
       _addMarkers(_shops);
+      mapController.onMarkerTapped.add(_onMarkerTapped);
     });
   }
   @override
