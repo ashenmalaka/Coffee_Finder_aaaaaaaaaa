@@ -2,6 +2,7 @@ import 'package:coffee_finder_app/api/CoffeeShopsApi.dart';
 import 'package:coffee_finder_app/api/MyLocationApi.dart';
 import 'package:coffee_finder_app/model/CoffeeShopsData.dart';
 import 'package:coffee_finder_app/model/LocationData.dart';
+import 'package:coffee_finder_app/widgets/CoffeeCard.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -136,6 +137,13 @@ class _MyMapPageState extends State<MyMapPage> {
               valueColor: AlwaysStoppedAnimation(Colors.white),
           )
          ),
+         Align(
+           child: _selectedMarker != null ? CoffeeCard(
+             shopImage: _shopImage,
+             shopName: _shopName,
+           ): Container(),
+           alignment: Alignment.bottomCenter,
+         )
         ],
       )
       );
