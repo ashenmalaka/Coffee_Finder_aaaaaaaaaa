@@ -115,7 +115,9 @@ class _MyMapPageState extends State<MyMapPage> {
       appBar: new AppBar(
         title: new Text(widget.title),
         ),
-        body: new Center(
+        body: Stack(
+          children: <Widget>[
+            new Center(
           child: _myLocationData != null ? SizedBox(
             child: GoogleMap(
               onMapCreated: _onMapCreated,
@@ -130,10 +132,12 @@ class _MyMapPageState extends State<MyMapPage> {
                 ),
             ),
           ): CircularProgressIndicator(
-            strokeWidth: 4.0,
-            valueColor: AlwaysStoppedAnimation(Colors.white),
+              strokeWidth: 4.0,
+              valueColor: AlwaysStoppedAnimation(Colors.white),
           )
-        ),
+         ),
+        ],
+      )
       );
     }
   }
