@@ -26,7 +26,8 @@ class CoffeeCard extends StatelessWidget {
               height: 150.0,
               width: 300.0,
               fit: BoxFit.cover,
-            )
+            ),
+            Text(shopName),
           ],
         ),
       ),
