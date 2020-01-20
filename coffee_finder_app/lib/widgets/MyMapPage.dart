@@ -129,7 +129,7 @@ class _MyMapPageState extends State<MyMapPage> {
                     _myLocationData.lon,
                     ),
                     zoom: 14.0
-                )
+                 )
                 ),
             ),
           ): CircularProgressIndicator(
@@ -145,7 +145,7 @@ class _MyMapPageState extends State<MyMapPage> {
            alignment: Alignment.bottomCenter,
          )
         ],
-      )
+       )
       );
     }
   }

@@ -10,7 +10,7 @@ class CoffeeCard extends StatelessWidget {
   static const _endpoint = 'https://maps.googleapis.com/maps/api/place/photo';
 
   String _placesPhotoApi(){
-    return _endpoint + '?maxHeight=150&photoreference=' + shopImage + '&key=' + apiKey;
+    return _endpoint + '?maxheight=150&photoreference=' + shopImage + '&key=' + apiKey;
   }
 
   @override
