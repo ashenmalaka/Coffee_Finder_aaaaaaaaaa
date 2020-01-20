@@ -15,6 +15,20 @@ class CoffeeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
+    return SizedBox(
+      height: 220.0,
+      width: 300.0,
+      child: Card(
+        child: Column(
+          children: <Widget>[
+            Image.network(
+              _placesPhotoApi(),
+              height: 150.0,
+              width: 300.0,
+              fit: BoxFit.cover,
+            )
+          ],
+        ),
+      ),
+    );
   }}
