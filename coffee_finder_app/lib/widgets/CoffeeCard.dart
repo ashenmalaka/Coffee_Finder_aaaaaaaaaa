@@ -28,7 +28,10 @@ class CoffeeCard extends StatelessWidget {
               width: 300.0,
               fit: BoxFit.cover,
             ),
-            Row(
+            Container(
+              padding: EdgeInsets.all(6.0),
+              child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
                   shopName,
@@ -39,8 +42,8 @@ class CoffeeCard extends StatelessWidget {
                 ),
                 Directions(),
               ],
-            )
-            
+            ) ,
+           )
           ],
         ),
       ),
