@@ -12,6 +12,9 @@ class Directions extends StatelessWidget{
             width: 20.0,
             fit: BoxFit.cover,
           ),
+          Text(
+            'Directions',
+          )
         ],
       ),
     );
