@@ -6,7 +6,12 @@ class Directions extends StatelessWidget{
     return Container(
       child: Row(
         children: <Widget>[
-
+          Image.asset(
+            'assets/img/directions.png',
+            height: 20.0,
+            width: 20.0,
+            fit: BoxFit.cover,
+          ),
         ],
       ),
     );
