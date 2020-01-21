@@ -5,6 +5,7 @@ class Directions extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
       child:Container(
+        padding: EdgeInsets.all(4.0),
        decoration: BoxDecoration(
          color: Colors.black,
          borderRadius: BorderRadius.circular(5.0),
