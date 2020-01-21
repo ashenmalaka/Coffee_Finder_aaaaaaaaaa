@@ -20,6 +20,7 @@ class CoffeeCard extends StatelessWidget {
       height: 220.0,
       width: 300.0,
       child: Card(
+        elevation: 16.0,
         child: Column(
           children: <Widget>[
             Image.network(
