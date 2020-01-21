@@ -1,4 +1,5 @@
 import 'package:coffee_finder_app/config/config.dart';
+import 'package:coffee_finder_app/widgets/Directions.dart';
 import 'package:flutter/material.dart';
 
 class CoffeeCard extends StatelessWidget {
@@ -27,7 +28,19 @@ class CoffeeCard extends StatelessWidget {
               width: 300.0,
               fit: BoxFit.cover,
             ),
-            Text(shopName),
+            Row(
+              children: <Widget>[
+                Text(
+                  shopName,
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Directions(),
+              ],
+            )
+            
           ],
         ),
       ),
