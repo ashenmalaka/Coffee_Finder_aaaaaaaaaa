@@ -19,6 +19,10 @@ class Directions extends StatelessWidget{
           ),
           Text(
             'Directions',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           )
         ],
       ),
