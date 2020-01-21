@@ -1,6 +1,7 @@
 import 'package:coffee_finder_app/config/config.dart';
 import 'package:coffee_finder_app/widgets/Directions.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CoffeeCard extends StatelessWidget {
 
@@ -12,6 +13,16 @@ class CoffeeCard extends StatelessWidget {
 
   String _placesPhotoApi(){
     return _endpoint + '?maxheight=150&photoreference=' + shopImage + '&key=' + apiKey;
+  }
+
+  void _callDirections() async {
+    final url = 'https://www.google.com/maps/dir/?api=1&destination=' + shopName;
+
+    if(await canLaunch(url)){
+      await launch(url);
+    }else{
+      throw 'Could not launch $url';
+    }
   }
 
   @override
@@ -41,9 +52,12 @@ class CoffeeCard extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Material(
-                  elevation: 12.0,
-                  child: Directions(),
+                GestureDetector(
+                  onTap: _callDirections,
+                  child: Material(
+                   elevation: 12.0,
+                   child: Directions(),
+                 ),
                 )
               ],
             ) ,
