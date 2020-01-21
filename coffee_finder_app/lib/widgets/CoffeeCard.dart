@@ -41,7 +41,10 @@ class CoffeeCard extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Directions(),
+                Material(
+                  elevation: 12.0,
+                  child: Directions(),
+                )
               ],
             ) ,
            )
